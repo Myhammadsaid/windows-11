@@ -6,14 +6,21 @@
 }
 
 body {
-	background-image: url(../images/wallpaper.jpg);
+	background-image: url(../images/wallpaper.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position-y: top !important;
 }
 
+button {
+	border: none;
+	cursor: pointer;
+	background: none;
+}
+
 input {
 	outline: none;
+	border: none;
 }
 
 .flex {
@@ -32,6 +39,10 @@ input {
 	right: 0;
 }
 
+.windows {
+	cursor: pointer;
+}
+
 .weather {
 	gap: 5px;
 }
@@ -45,7 +56,7 @@ input {
 }
 
 .menu {
-	gap: 8px;
+	gap: 10px;
 }
 
 .menu img {
@@ -63,18 +74,22 @@ input {
 	padding: 5px;
 	padding-left: 15px;
 	border-radius: 10px;
-	border: none;
 }
 
 .items {
 	justify-content: center;
 	list-style: none;
-	gap: 5px;
+	gap: 10px;
+}
+
+.items img {
+	cursor: pointer;
 }
 
 .items i {
-	font-size: 26px;
-	color: #fed04c;
+	cursor: pointer;
+	font-size: 28px;
+	color: #ffac1a;
 }
 
 .notification {
@@ -86,5 +101,122 @@ input {
 }
 
 .clock span {
+	font-size: 12px;
+}
+
+.menu__bar {
+	position: fixed;
+	width: 100%;
+	max-width: 450px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #dde5f7;
+	padding: 20px;
+	display: none;
+	flex-direction: column;
+	/* animation-name: menu;
+	animation-duration: 1s; */
+	gap: 20px;
+}
+
+/* @keyframes menu {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+} */
+
+.show {
+	display: flex;
+}
+
+.header {
+	margin-bottom: 20px;
+}
+
+.header h4 {
+	font-weight: 500;
+}
+
+.header button {
+	background: #fff;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 2px 5px 2px 5px;
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.main div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	cursor: pointer;
+	gap: 5px;
+}
+
+.main div img {
+	height: 30px;
+}
+
+.main div h5 {
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.user div {
+	justify-content: center;
+	gap: 5px;
+}
+
+.user div h5 {
+	font-weight: 500;
+}
+
+.circle {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: #9499a5;
+}
+
+.user button {
+	cursor: no-drop;
+}
+
+.files {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.file {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	gap: 5px;
+}
+
+.file div h5 {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.file div p {
+	color: #71757e;
 	font-size: 12px;
 }
