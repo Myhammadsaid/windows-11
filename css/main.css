@@ -1,0 +1,89 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	background-image: url(../images/wallpaper.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+input {
+	outline: none;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.screen {
+	z-index: 20;
+	padding: 5px;
+	background: #e1eaf7;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.weather {
+	gap: 5px;
+}
+
+.weather h5 {
+	color: #4a4e51;
+}
+
+.weather h6 {
+	color: #767c81;
+}
+
+.menu {
+	gap: 8px;
+}
+
+.menu img {
+	max-width: 30px;
+}
+
+.search {
+	width: 100%;
+	height: 100%;
+}
+
+.search input {
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	padding-left: 15px;
+	border-radius: 10px;
+	border: none;
+}
+
+.items {
+	justify-content: center;
+	list-style: none;
+	gap: 5px;
+}
+
+.items i {
+	font-size: 26px;
+	color: #fed04c;
+}
+
+.notification {
+	gap: 8px;
+}
+
+.clock {
+	flex-direction: column;
+}
+
+.clock span {
+	font-size: 12px;
+}
