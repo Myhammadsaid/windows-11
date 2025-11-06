@@ -23,6 +23,10 @@ input {
 	border: none;
 }
 
+i {
+	cursor: pointer;
+}
+
 .flex {
 	display: flex;
 	align-items: center;
