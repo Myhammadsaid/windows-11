@@ -29,8 +29,20 @@ input {
 	justify-content: space-between;
 }
 
-.screen {
+.sidebar {
+	display: none;
 	z-index: 20;
+	position: absolute;
+	background: #dde5f7;
+	padding: 20px;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	gap: 20px;
+}
+
+.screen {
+	z-index: 100;
 	padding: 5px;
 	background: #dde5f7;
 	position: fixed;
@@ -92,7 +104,7 @@ input {
 	color: #ffac1a;
 }
 
-.notification {
+.not__items {
 	gap: 8px;
 }
 
@@ -104,33 +116,19 @@ input {
 	font-size: 12px;
 }
 
-.menu__bar {
-	position: fixed;
-	width: 100%;
-	max-width: 450px;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #dde5f7;
-	padding: 20px;
-	display: none;
-	flex-direction: column;
-	/* animation-name: menu;
-	animation-duration: 1s; */
-	gap: 20px;
+.menu {
+	position: relative;
+	margin-left: 259px;
 }
 
-/* @keyframes menu {
-	0% {
-		transform: scale(0);
-	}
-	100% {
-		transform: scale(1);
-	}
-} */
+.menu__bar {
+	left: 0;
+	right: 0;
+	bottom: 100%;
+}
 
 .show {
-	display: flex;
+	display: flex !important;
 }
 
 .header {
@@ -154,7 +152,7 @@ input {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: 20px;
 }
 
 .main div {
@@ -219,4 +217,84 @@ input {
 .file div p {
 	color: #71757e;
 	font-size: 12px;
+}
+
+.notification {
+	display: flex;
+	min-width: 400px;
+	position: relative;
+	justify-content: end;
+}
+
+.not__items {
+	max-width: 170px;
+}
+
+.wifi__menu {
+	left: 0;
+	right: 0;
+	bottom: 100%;
+}
+
+.switch {
+	width: 50px;
+	height: 25px;
+	border-radius: 40px;
+}
+
+.switch span {
+	width: 20px;
+	height: 20px;
+	background: #0a63bc;
+	border-radius: 50%;
+}
+
+.switch:active {
+	background: #0a63bc;
+}
+
+.switch:active span {
+	animation-name: switch;
+	animation-duration: 0.3s;
+	background: #fff;
+}
+
+@keyframes switch {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.wifis {
+	flex-direction: column;
+}
+
+.wifis div {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.wifis div h4 {
+	font-weight: 500;
+}
+
+.wifis div i {
+	font-size: 24px;
+}
+
+.volume {
+	position: relative;
+	justify-content: center;
+}
+
+.range__menu {
+	right: 0;
+	left: 0;
+	bottom: 100%;
+	justify-content: center;
 }
