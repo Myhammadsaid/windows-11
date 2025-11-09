@@ -102,10 +102,19 @@ i {
 	cursor: pointer;
 }
 
-.items i {
-	cursor: pointer;
-	font-size: 28px;
-	color: #ffac1a;
+.line-x,
+.line-y {
+	width: 200px;
+	height: 2px;
+	position: absolute;
+	background: red;
+}
+
+.line-x {
+	transform: rotate(10deg);
+}
+.line-y {
+	transform: rotate(-10deg);
 }
 
 .not__items {
@@ -301,4 +310,44 @@ i {
 	left: 0;
 	bottom: 100%;
 	justify-content: center;
+}
+
+.window {
+	width: 100%;
+	max-width: 500px;
+	height: 100%;
+	max-height: 400px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background: #fff;
+}
+
+.window__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.window__header div {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.window__header div h4 {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.window__header div button i {
+	font-size: 15px;
+}
+
+.fullscreen {
+	max-width: none;
+	max-height: none;
 }
